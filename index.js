@@ -5,7 +5,7 @@ const cors = require('cors');
 const app = express();
 const port = 3000;
 app.use(cors());
-const db = new sqlite3.Database('./database.sqlite', (err) => {
+const db = new sqlite3.Database('database.sqlite', (err) => {
   if (err) {
     console.error('Error opening database:', err.message);
   } else {
